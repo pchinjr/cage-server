@@ -17,11 +17,11 @@ console.log('Cage Bot is now available to worship at http://45.55.86.193:' + por
 io.on('connection', function (socket) {
         console.log("your socket id is ", socket.id);
 
-        socket.on('join', function(data) {
+        socket.on('public-join', function(data) {
           console.log('worshiper connected');
         });
         
-        socket.on('clientconnect', function(data) {
+        socket.on('cage-pi-connect', function(data) {
             console.log(data);
         });
 
