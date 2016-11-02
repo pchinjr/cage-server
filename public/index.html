@@ -13,11 +13,13 @@
 			var socket = io.connect('http://45.55.86.193:3000/');
 			socket.on('connect', function(data) {
 							socket.emit('public-join', {message: "public worshiper joined"});
+							
+							$('#servoSweep').on('click', function(){
+  						console.log('start servo sweep');
+  						socket.emit('servo:sweep');
 			});
 
-			$('#servoSweep').on('click', function(){
-  		console.log('start servo sweep');
-  		socket.emit('servo:sweep');
+			
 });
 	</script>
 	<body>
