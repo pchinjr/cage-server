@@ -23,10 +23,11 @@ io.on('connect', function (socket) {
         
         socket.on('cage-pi-connect', function(data) {
             console.log(data);
+            socket.emit()
         });
 
         socket.on('servo:sweep', function(data){
-            socket.emit('servo:sweep');
+            socket.to('server-room').emit('servo:sweep');
             console.log('servo sweep sent')
         });
 
