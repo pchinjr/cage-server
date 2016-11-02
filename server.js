@@ -20,6 +20,10 @@ io.on('connection', function (socket) {
         socket.on('join', function(data) {
           console.log('worshiper connected');
         });
+        
+        socket.on('clientconnect', function(data) {
+            console.log(data);
+        }
 
         socket.on('disconnect', function() {
           console.log('browser closed');
