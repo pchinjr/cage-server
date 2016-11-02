@@ -27,6 +27,7 @@ io.on('connect', function (socket) {
 
         socket.on('servo:sweep', function(data){
             socket.emit('servo:sweep');
+            console.log('servo sweep sent')
         });
 
         socket.on('disconnect', function() {
