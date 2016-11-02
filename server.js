@@ -23,7 +23,7 @@ io.on('connect', function (socket) {
         
         socket.on('cage-pi-connect', function(data) {
             console.log(data);
-            io.join('server-room');
+            socket.join('server-room');
         });
 
         socket.on('servo:sweep', function(data){
