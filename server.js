@@ -25,6 +25,10 @@ io.on('connect', function (socket) {
             console.log(data);
         });
 
+        socket.on('servo:sweep', function(data){
+            socket.emit('servo:sweep');
+        });
+
         socket.on('disconnect', function() {
           console.log('browser closed');
         })
