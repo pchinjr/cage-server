@@ -18,7 +18,7 @@ io.on('connect', function (socket) {
         console.log("your socket id is ", socket.id);
 
         socket.on('public-join', function(data) {
-          console.log('worshiper connected');
+          console.log(data);
         });
         
         socket.on('cage-pi-connect', function(data) {
