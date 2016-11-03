@@ -13,8 +13,8 @@
 			var socket = io.connect('http://45.55.86.193:3000/');
 			socket.on('connect', function(data) {
 				socket.emit('public-join', {message: "public worshiper joined"});
+				var counter = 0;
 				$('#servoSet').on('click', function(){
-					var counter = 0;
 					console.log('start set to 90');
 					socket.emit('servo:set', counter);
 					counter++;
