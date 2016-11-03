@@ -3,7 +3,7 @@
 		<title>Welcome Worshiper!</title>
 	<head>
 	<body>
-		<button id="servoSweep">May the Cage be with you</button>
+		<button id="servoSet">May the Cage be with you</button>
 
 
 
@@ -14,9 +14,9 @@
 			socket.on('connect', function(data) {
 							socket.emit('public-join', {message: "public worshiper joined"});
 							
-							$('#servoSweep').on('click', function(){
-  						console.log('start servo sweep');
-  						socket.emit('servo:sweep');
+							$('#servoSet').on('click', function(){
+  						console.log('start set to 90');
+  						socket.emit('servo:set');
 			});
 
 			

@@ -26,9 +26,9 @@ io.on('connect', function (socket) {
             socket.join('server-room');
         });
 
-        socket.on('servo:sweep', function(data){
-            socket.to('server-room').emit('servo:sweep');
-            console.log('servo sweep sent')
+        socket.on('servo:set', function(data){
+            socket.to('server-room').emit('servo:set');
+            console.log('servo set to 90 sent')
         });
 
         socket.on('disconnect', function() {
