@@ -27,7 +27,12 @@
 				$('#servoSet').on('click', function(){
 					console.log('start set to 90');
 					socket.emit('servo:set', counter);
-					counter++;
+					if (counter <= 180) {
+						counter++;
+					} else {
+						counter=0;
+						alert('Worship Complete for today');
+					};
 				});		
 			});
 	</script>
