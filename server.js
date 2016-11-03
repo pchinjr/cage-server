@@ -27,8 +27,8 @@ io.on('connect', function (socket) {
         });
 
         socket.on('servo:set', function(data){
-            socket.to('server-room').emit('servo:set');
-            console.log('servo set to 90 sent')
+            socket.to('server-room').emit('servo:set', data);
+            console.log('servo set to'+ data);
         });
 
         socket.on('disconnect', function() {
